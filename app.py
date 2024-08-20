@@ -6,6 +6,10 @@ from langchain_huggingface import HuggingFaceEmbeddings
 import os
 from dotenv import load_dotenv
 load_dotenv()
+import nltk
+
+# Download the necessary nltk data
+nltk.download('punkt')
 # Initialize the Pinecone client
 api_key = os.getenv("PINECONE_API_KEY")
 index_name = "hybrid-search-langchain-pinecone"
